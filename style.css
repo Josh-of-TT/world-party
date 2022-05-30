@@ -323,10 +323,10 @@ header.grad {z-index: auto;}
 }
 
 footer {padding-bottom: 60px;}
-footer .col-2 a {font-weight: normal;}
-footer svg{width: 40px;height: 40px;}
+footer svg {width: 40px;height: 40px;}
 .lower-footer {background-color: black;}
-.lower-footer a{color: white;}
+.lower-footer a {color: white;}
+.lower-footer a:hover {text-decoration: underline;}
 .lower-footer p , .lower-footer a{font-size: 11px;}
 .lower-footer .flex-row {align-content: flex-start;}
 
@@ -341,10 +341,6 @@ footer svg{width: 40px;height: 40px;}
 
 
 /* Media Queries. Use these, modify breakpoints, add, or delete.  */
-@media (max-width: 1200px) {
-.container {
-    /* width: 100%; */
-}
 
 @media (max-width: 1000px){
     .half-1000 { width: 50%; }
