@@ -32,7 +32,7 @@ Version: 1.0
 /* CSS reset.  Why?  Because browser makers make the www difficult to style. Enough with that.  */
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; }
-body { line-height:1; font-family:'open sans', sans-serif; font-size:18px; background:#eee}
+body { line-height:1; font-family:'open sans', sans-serif; font-size:18px; background-color:#eee;height: 100%;position:relative}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
 ol, ul { list-style:none; }
 blockquote, q { quotes:none;  }
@@ -250,7 +250,7 @@ a:not(.btn):hover:after {opacity: 1;-webkit-transform: scale(1);transform: scale
 .teal {color:var(--color-blue)}
 .darkblue {color:var(--color-darkblue)}
 
-iframe {border-radius:16px;box-shadow: 0 0 0px 12px rgb(0 0 0 / 30%);aspect-ratio: 16 / 9;width: 50%;}
+iframe {border-radius:16px;box-shadow: 0 0 0px 12px rgb(0 0 0 / 30%);aspect-ratio: 16 / 9;width: 80%;}
 
 /*
  *
@@ -259,6 +259,17 @@ iframe {border-radius:16px;box-shadow: 0 0 0px 12px rgb(0 0 0 / 30%);aspect-rati
  */
 
 /* Layout */
+body:before {  
+	content: '';  
+	background-image: url(img/noise.png);
+    background-repeat: repeat;
+    opacity: .05;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+}
+
 .container {width: min(90vw, 1580px);}
 .inner {width: min(1200px, 95%); margin: 0 auto; z-index: 1;}
 footer .inner:first-child {padding-top: 120px;}
@@ -266,8 +277,8 @@ footer .inner:first-child {padding-top: 120px;}
 /* Custom Headers */
 h1,h2,h3,h4,h5 {font-family:'Red Hat Display', sans-serif;}
 header h1,header h2{color: white;}
-h1 {font-size: calc(2 * var(--val-baseline));font-weight: 700;}
-h2 {font-size: calc(2 * var(--val-baseline));font-weight: 500;color:white;font-family:ubuntu, sans-serif;text-align: center;}
+h1 {font-size: calc(2 * var(--val-baseline));font-weight: 700;line-height: 1.2em;}
+h2 {font-size: calc(2 * var(--val-baseline));font-weight: 500;color:white;font-family:ubuntu, sans-serif;text-align: center;margin-bottom:calc(var(--val-baseline)*2)}
 .h2-italic {font-style: italic;}
 h3 {font-size: calc(1.5 * var(--val-baseline));font-weight: 500;line-height: 1.2em;color:var(--color-blue);}
 h4 {font-size: calc(var(--val-baseline));font-weight: 700; color:var(--color-blue)}
