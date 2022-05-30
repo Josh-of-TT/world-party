@@ -18,6 +18,7 @@ Version: 1.0
 	--color-tt-black: 			#0f0f0f;
 	--color-green: 				#92B25E;
 	--color-blue: 				#1C7F9F;
+	--color-darkblue:			#165d75;
 	--color-red: 				#B62F43;
 	--color-orange:				#ffa500;
 	--color-yellow:				#ff9;
@@ -59,7 +60,7 @@ html {
 *, *:before, *:after {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
 
 body {font-family: 'Open Sans', sans-serif; line-height:1;-webkit-text-size-adjust:none; -webkit-font-smoothing: antialiased; /* Chrome, Safari */ -moz-osx-font-smoothing: grayscale; /* Firefox */}
-p, li, td, th {line-height: 1.6em;color: var(--color-grey)}
+p, li, td, th, h1 {line-height: 1.6em;color: var(--color-darkblue)}
 p strong {color:var(--color-grey-dark-very)}
 img {max-width: 100%; height: auto; display: inline-block; vertical-align: middle;}
 a { outline:none; text-decoration:none; transition:all 0.2s ease-out; color: var(--color-blue); }
@@ -247,6 +248,7 @@ a:not(.btn):hover:after {opacity: 1;-webkit-transform: scale(1);transform: scale
 /* font colors here */
 .white {color:#ffffff}
 .teal {color:var(--color-blue)}
+.darkblue {color:var(--color-darkblue)}
 
 iframe {border-radius:16px;box-shadow: 0 0 0px 12px rgb(0 0 0 / 30%);aspect-ratio: 16 / 9;width: 50%;}
 
