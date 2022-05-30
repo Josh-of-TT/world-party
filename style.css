@@ -318,6 +318,8 @@ header.grad {z-index: auto;}
 .grad-arrow {margin-top: 75px;height:299px;background-image: url(img/section-arrow-grad.png);color: white;}
 .grad svg {fill: white;}
 .grad p, .grad p strong {color:white}
+.grad .content {position: relative;z-index: 1;
+}
 
 footer {padding-bottom: 60px;}
 footer .col-2 a {font-weight: normal;}
