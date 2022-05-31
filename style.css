@@ -356,7 +356,7 @@ footer svg {width: 40px;height: 40px;}
 	.eye {top: -230px;}
 }
 @media (max-width: 800px){
-	#header-sticky {top: -10px;}
+	#header-sticky .content-container > div {top: -30px;}
     .half-800 { width: 50%; }
     .full-800 { float: none; width: 100%; display: block; }
 	.no-flex-800 { display: inherit;}
@@ -364,7 +364,9 @@ footer svg {width: 40px;height: 40px;}
 	.eye {top: -270px;}
 }
 @media (max-width: 600px){
-	#header-sticky {top: -25px;}
+	#header-sticky .content-container > div {top: -50px;}
+	#header-sticky a.btn.btn--filled {display: none;}
+	#header-sticky .flex {flex-direction: row-reverse;}
 	#mobile-submit-talk {display: flex;}
 	#submit-talk svg {margin-top: 0;}
 	#desktop-submit-talk svg{display: none;}
@@ -382,7 +384,9 @@ footer svg {width: 40px;height: 40px;}
 
 }
 @media (max-width: 500px){
-	#header-sticky {top: -38px;}
+	header .py-xlarge {padding-top: calc( var(--val-baseline) * 2);padding-bottom: calc( var(--val-baseline) * 2);margin-right: calc( var(--val-baseline) * 2 );margin-left: calc( var(--val-baseline) * 2 );}
+	#hero-ctas {display: flex;flex-direction: column; justify-content: center;}
+	#hero-ctas .btn.btn--filled:first-child {margin:0 0 20px 0}
     .half-500 { width: 50%; }
     .full-500 { float: none; width: 100%; display: block; }
 	.no-flex-500 { display: inherit;}
@@ -390,7 +394,7 @@ footer svg {width: 40px;height: 40px;}
 	.lower-footer .flex-row {flex-direction: column;}
 }
 @media (max-width: 400px){
-	#header-sticky {top: -44px;}
+	
     .half-400 { width: 50%; }
     .full-400 { float: none; width: 100%; display: block; }
     .no-flex-400 { display: inherit;}
