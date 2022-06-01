@@ -308,7 +308,7 @@ header.grad {z-index: auto;}
 #header-sticky {position: fixed;z-index: 10;width:min(96vw, 1500px);}
 #header-sticky .content-container div img {width: 30%;}
 #header-sticky .content-container {width: 100%;}
-#header-sticky .content-container > div {width: 90%}
+#header-sticky .content-container > div {width: 90%;padding-top: 80px;}
 #header-sticky .content-container svg {width: 100%;position: absolute;top: -60px;}
 svg#sticky1 {top: -50px !important;}
 
