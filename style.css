@@ -85,8 +85,6 @@ overflow-x: auto;}
 a:not(.btn):hover:after {opacity: 1;-webkit-transform: scale(1);transform: scale(1);}
 
 /* reusable classes */
-.hidden, .none, .hide { display: none; }
-.invisible {visibility: hidden; }
 .shadow {box-shadow: 0 0 20px rgba(0,0,0,.1);}
 
 /* Img Alignment */
@@ -99,6 +97,7 @@ a:not(.btn):hover:after {opacity: 1;-webkit-transform: scale(1);transform: scale
 .text-left {text-align: left;}
 .text-right {text-align: right;}
 .text-center {text-align: center;}
+.align-top {align-content: start;}
 .text-col {width: min(75%, 900px);margin: 0 auto;}
 
 /* Positioning */
@@ -286,7 +285,7 @@ h4 {font-size: calc(var(--val-baseline));font-weight: 700; color:var(--color-blu
 h5 {font-size: calc(.75 * var(--val-baseline));font-weight: 700; color:var(--color-blue);line-height: 1.8em}
 
 
-
+/* Transitions */
 .top-transition { clip-path: polygon(50% 5%, 100% 0, 100% 100%, 0 100%, 0 0);
  }
 .shape-transition {clip-path: polygon(50% 5%, 100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
@@ -294,6 +293,10 @@ h5 {font-size: calc(.75 * var(--val-baseline));font-weight: 700; color:var(--col
 .btm-transition { 
 	clip-path: polygon(0 0, 100% 0%, 100% 90%, 50% 100%, 0 90%)
 }
+
+/* Visibility */
+.hidden, .none, .hide { display: none; }
+.invisible {visibility: hidden; }
 
 /* Grads w/ noize */
 .grad {position: relative; width: 100%;background-image: var(--grad-one); z-index: 0;}
@@ -308,7 +311,7 @@ header.grad {z-index: auto;}
 #header-sticky {position: fixed;z-index: 10;width:min(96vw, 1500px);}
 #header-sticky .content-container div img {width: 30%;}
 #header-sticky .content-container {width: 100%;}
-#header-sticky .content-container > div {width: 90%;padding-top: 80px;}
+#header-sticky .content-container > div {width: 90%;}
 #header-sticky .content-container svg {width: 100%;position: absolute;top: -60px;}
 svg#sticky1 {top: -50px !important;}
 
@@ -346,6 +349,31 @@ footer svg {width: 40px;height: 40px;}
 /* Homepage  */
 #first-arrow .inner p { padding-top: 70px;}
 
+/* Schedule */
+.container-schedule, .container-schedule-single {
+	width: 90%;
+	grid-template-columns: 25% 25% 25% 25%;
+	gap: 4px;
+	margin-left: -12px; /* gap pushes the grid off center :( */
+}
+
+.container-schedule-single {
+	display: none;
+	grid-template-columns: .5fr 1fr;
+}
+
+.cell {
+	background-color: rgba(0, 0, 0, .6);
+	color: white;
+	text-transform: uppercase;
+	font-size: .8em;
+	min-height: 40px;
+	line-height: 1.5em;
+}
+.cell.empty {background-color: transparent;}
+.cell.header {background-color: white;color:var(--color-darkblue);font-weight: bold;}
+/* .cell.header:not(.row-title) {max-height: 80px;} */
+.cell.row-title {align-items: top;}
 
 /* Media Queries. Use these, modify breakpoints, add, or delete.  */
 
@@ -382,6 +410,14 @@ footer svg {width: 40px;height: 40px;}
 	#first-arrow .w75 {flex-direction: column;}
 	#first-arrow h1 {margin-bottom:20px}
 
+	/* grid stuff for Schedule */
+	.container-schedule {
+		display: none;
+	}
+
+	.container-schedule-single {
+		display: grid;
+	}
 }
 @media (max-width: 500px){
 	header .py-xlarge {padding-top: calc( var(--val-baseline) * 2);padding-bottom: calc( var(--val-baseline) * 2);margin-right: calc( var(--val-baseline) * 2 );margin-left: calc( var(--val-baseline) * 2 );}
