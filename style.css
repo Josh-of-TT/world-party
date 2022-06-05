@@ -399,7 +399,6 @@ footer svg {width: 40px;height: 40px;}
 	#mobile-submit-talk {display: flex;}
 	#submit-talk svg {margin-top: 0;}
 	#desktop-submit-talk svg{display: none;}
-	.container {width: 96vw;}
 	:root {--val-baseline: 15px;}
     .half-600 { width: 50%; }
     .full-600 { float: none; width: 100%; display: block; }
