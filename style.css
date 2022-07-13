@@ -384,7 +384,7 @@ footer svg {width: 40px;height: 40px;}
 .person h3 {font-size: 16px; font-weight: 700;}
 .person h4 {font-size: 14px; font-weight: 300;}
 .all-sponsors {margin-bottom: 50px;}
-.all-sponsors a {height: 130px;}
+.all-sponsors a {max-height: 130px; padding: 20px;}
 .all-sponsors img {max-height: 100% !important;}
 /* Media Queries. Use these, modify breakpoints, add, or delete.  */
 
